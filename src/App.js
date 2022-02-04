@@ -15,8 +15,22 @@ function App() {
       <div className="container">
         <h2 className="section-title">Islands</h2>
         <ul className="cards">
+            {data.islands.map(island => {
+                return(
+                 <Card
+                 name={island.name}
+                 description={island.description}
+                 lon={island.coords.lon}
+                 lat={island.coords.lat}   
+                 image={island.image}
+                 wiki={island.wiki}
+                 
+                 
+                 />   
+                )
+            })}
           
-          <Card />
+          
           
         </ul>
       </div>
